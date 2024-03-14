@@ -1,6 +1,8 @@
 // Import our custom CSS
 import './scss/styles.scss'
 
+import $ from "jquery";
+
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 
@@ -12,5 +14,10 @@ import './js/particles.js'
 // Import https://github.com/mattboldt/typed.js/
 // import Typed from 'typed.js';
 import '../node_modules/typed.js/dist/typed.umd.js'
+
+
+
+import './js/validare.js';
+
 
 import './js/main.js';
