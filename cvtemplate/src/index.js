@@ -21,3 +21,5 @@ import './js/validare.js';
 
 
 import './js/main.js';
+
+import './js/skill.js';
