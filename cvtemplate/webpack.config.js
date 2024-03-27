@@ -20,6 +20,7 @@ const myContact = fs.readFileSync(paths.source + '/views/contact.html');
 const myFooter = fs.readFileSync(paths.source + '/views/footer.html');
 const myExperience = fs.readFileSync(paths.source + '/views/experience.html');
 const myPortfolio = fs.readFileSync(paths.source + '/views/portfolio.html');
+const myGithubApi = fs.readFileSync(paths.source + '/views/githubapi.html');
 module.exports = {
     stats: {
         errorDetails: true,
@@ -43,6 +44,7 @@ module.exports = {
             myContact: myContact,
             myExperience: myExperience,
             myPortfolio: myPortfolio,
+            myGithubApi: myGithubApi,
             template: './src/index.html',
             filename: 'index.html',
             inject: 'body'
