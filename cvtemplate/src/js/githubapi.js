@@ -30,7 +30,7 @@ function getData(gitHubUser) {
 }
 
 function showData(repos) {
-    //const posts = JSON.parse(data);
+    
     let allRepo = '';
     repos.forEach(item => {
         allRepo += `
