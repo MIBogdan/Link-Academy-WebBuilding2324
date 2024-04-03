@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebSite Building Bootstrap + Webpack</title>
-<link rel="icon" href="favicon.ico?02c235db41e5ef60467c"><link href="css/main.css?02c235db41e5ef60467c" rel="stylesheet"></head>
+<link rel="icon" href="favicon.ico?76627432f265f292b4b3"><link href="css/main.css?76627432f265f292b4b3" rel="stylesheet"></head>
 
 <body>
     <!-- ======= Header ======= -->
@@ -18,12 +18,12 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="#hero" data-tr="meniu.Home">Home</a></li>
-                <li><a class="nav-link scrollto" href="#about" data-tr="meniu.About">About</a></li>
-                <li><a class="nav-link scrollto" href="#resume" data-tr="meniu.Experience">Experience</a></li>
-                <li><a class="nav-link scrollto" href="#services" data-tr="meniu.Services">Services</a></li>
-                <li><a class="nav-link scrollto " href="#work" data-tr="meniu.Work">Work</a></li>
-                <li><a class="nav-link scrollto " href="#blog" data-tr="meniu.Blog">Blog</a></li>
+                <li><a class="nav-link scrollto active" href="#hero" data-tr="menu.Home">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about" data-tr="menu.About">About</a></li>
+                <li><a class="nav-link scrollto" href="#resume" data-tr="menu.Experience">Experience</a></li>
+                <li><a class="nav-link scrollto" href="#work" data-tr="menu.Portfolio">Portfolio</a></li>
+                <li><a class="nav-link scrollto " href="#repo" data-tr="menu.Github">Github</a></li>
+                <li><a class="nav-link scrollto " href="#blog" data-tr="menu.Blog">Blog</a></li>
                 <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="#">Drop Down 1</a></li>
@@ -45,6 +45,11 @@
                 <li><a class="nav-link scrollto" href="#contact" data-tr="meniu.Contact">Contact</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
+            <ul>
+
+                <li><a data-id='en' href="index.html" onclick="window.changeLanguage('en')">English</a></li>
+                <li><a data-id='ro' href="index.html" onclick="window.changeLanguage('ro')">Romana</a></li>
+            </ul>
         </nav><!-- .navbar -->
 
     </div>
@@ -57,9 +62,9 @@
     <div class="hero-content display-table">
         <div class="table-cell">
             <div class="container">
-                <p class="display-6 color-d">Hello,</p>
-                <h1 class="hero-title mb-4">I am Marius</h1>
-                <p class="hero-subtitle"><span class="typed"
+                <p class="display-6 color-d" data-tr="banner.Hello">Hello,</p>
+                <h1 class="hero-title mb-4" data-tr="banner.Name">I am Marius</h1>
+                <p class="hero-subtitle"><span class="typed" id="typed" data-typed-tr="typed"
                         data-typed-items="Sportiv, Student, Developer, Freelancer, Designer"></span></p>
                 <ul class="list-inline list-social">
                     <li>
@@ -95,7 +100,7 @@
 
                 </ul>
                 <p class="pt-3 intro-content ">
-                    <a class="button stroke smoothscroll" href="#about" title="">More About Me <i
+                    <a class="button stroke smoothscroll" href="#about" title="" data-tr="banner.AboutMe">More About Me <i
                             class="bi bi-arrow-bar-down"></i></a>
 
                 </p>
@@ -120,18 +125,16 @@
                                 </div>
                                 <div class="col-sm-6 col-md-7">
                                     <div class="about-info">
-                                        <p><span class="title-s">Name: </span> <span>Adrian Adiaconitei</span></p>
-                                        <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
-                                        <p><span class="title-s">Email: </span> <span>contact@example.com</span></p>
-                                        <p><span class="title-s">Phone: </span> <span>(617) 557-0089</span></p>
+                                        <p><span class="title-s" data-tr="about.Name">Name: </span> <span>Marius-Ionita Bogdan</span></p>
+                                        <p><span class="title-s" data-tr="about.Profile">Profile: </span> <span>full stack developer</span></p>
+                                        <p><span class="title-s" data-tr="about.Email">Email: </span> <span>contact@example.com</span></p>
+                                        <p><span class="title-s" data-tr="about.Phone">Phone: </span> <span>(617) 557-0089</span></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="about-me pt-4 pt-md-0">
                                 <div class="title-box-2">
-                                    <h5 class="title-left">
-                                        About me
-                                    </h5>
+                                    <h5 class="title-left" data-tr="about.Me">About me</h5>
                                 </div>
                                 <p class="lead">
                                     Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu
@@ -158,9 +161,7 @@
                         <div class="col-md-6">
                             <div class="skill-mf">
                                 <div class="title-box-2">
-                                    <h5 class="title-left">
-                                        My Skills
-                                    </h5>
+                                    <h5 class="title-left" data-tr="about.Skills">My Skills</h5>
                                 </div>
                                 <ul id="skills" class="skills-bar-container">
 
@@ -253,7 +254,7 @@
 
                         <div class="col-twelve resume-header">
 
-                            <h2>Work Experience</h2>
+                            <h2 data-tr="experience.Work">Work Experience</h2>
 
                         </div> <!-- /resume-header -->
 
@@ -268,12 +269,12 @@
                                     </div>
 
                                     <div class="timeline-header">
-                                        <h3>UI Designer</h3>
-                                        <p>July 2015 - Present</p>
+                                        <h3 data-tr="experience.title1">UI Designer</h3>
+                                        <p data-tr="experience.date1">July 2015 - Present</p>
                                     </div>
 
                                     <div class="timeline-content">
-                                        <h4>Awesome Studio</h4>
+                                        <h4 data-tr="experience.placeTitle1">Awesome Studio</h4>
                                         <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur
                                             nisi
                                             cupidatat
@@ -293,12 +294,12 @@
                                     </div>
 
                                     <div class="timeline-header">
-                                        <h3>Front-end Developer</h3>
-                                        <p>July 2014 - June 2015</p>
+                                        <h3 data-tr="experience.title2">Front-end Developer</h3>
+                                        <p data-tr="experience.date2">July 2014 - June 2015</p>
                                     </div>
 
                                     <div class="timeline-content">
-                                        <h4>Super Cool Agency</h4>
+                                        <h4 data-tr="experience.placeTitle2">Super Cool Agency</h4>
                                         <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur
                                             nisi
                                             cupidatat
@@ -319,12 +320,12 @@
                                     </div>
 
                                     <div class="timeline-header">
-                                        <h3>Web Designer</h3>
-                                        <p>May 2013 - June 2014</p>
+                                        <h3 data-tr="experience.title3">Web Designer</h3>
+                                        <p data-tr="experience.date3">May 2013 - June 2014</p>
                                     </div>
 
                                     <div class="timeline-content">
-                                        <h4>Great Designs Studio</h4>
+                                        <h4 data-tr="experience.placeTitle3">Great Designs Studio</h4>
                                         <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur
                                             nisi
                                             cupidatat
@@ -348,7 +349,7 @@
 
                         <div class="col-twelve resume-header">
 
-                            <h2>Education</h2>
+                            <h2 data-tr="experience.education">Education</h2>
 
                         </div> <!-- /resume-header -->
 
@@ -363,12 +364,12 @@
                                     </div>
 
                                     <div class="timeline-header">
-                                        <h3>Master Degree</h3>
-                                        <p>July 2015 - Present</p>
+                                        <h3 data-tr="experience.educationTitle1">Master Degree</h3>
+                                        <p data-tr="experience.educationDate1">July 2015 - Present</p>
                                     </div>
 
                                     <div class="timeline-content">
-                                        <h4>University of Life</h4>
+                                        <h4 data-tr="experience.educationPlaceTitle1">University of Life</h4>
                                         <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur
                                             nisi
                                             cupidatat
@@ -388,12 +389,12 @@
                                     </div>
 
                                     <div class="timeline-header">
-                                        <h3>Bachelor Degree</h3>
-                                        <p>July 2014 - June 2015</p>
+                                        <h3 data-tr="experience.educationTitle2">Bachelor Degree</h3>
+                                        <p data-tr="experience.educationTitle2">July 2014 - June 2015</p>
                                     </div>
 
                                     <div class="timeline-content">
-                                        <h4>State Design University</h4>
+                                        <h4 data-tr="experience.educationPlaceTitle1">State Design University</h4>
                                         <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur
                                             nisi
                                             cupidatat
@@ -414,12 +415,12 @@
                                     </div>
 
                                     <div class="timeline-header">
-                                        <h3>Bachelor Degree</h3>
-                                        <p>May 2013 - June 2014</p>
+                                        <h3 data-tr="experience.educationTitle3">Bachelor Degree</h3>
+                                        <p data-tr="experience.educationDate3">May 2013 - June 2014</p>
                                     </div>
 
                                     <div class="timeline-content">
-                                        <h4>Design College</h4>
+                                        <h4 data-tr="experience.educationPlaceTitle1">Design College</h4>
                                         <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur
                                             nisi
                                             cupidatat
@@ -449,12 +450,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="title-box text-center">
-                    <h3 class="title-a">
-                        Portfolio
-                    </h3>
-                    <p class="subtitle-a">
-                        The latest projects completed
-                    </p>
+                    <h3 class="title-a" data-tr="portfolio.title">Portfolio</h3>
+                    <p class="subtitle-a" data-tr="portfolio.subtitle">The latest projects completed</p>
                     <div class="line-mf"></div>
                 </div>
             </div>
@@ -470,9 +467,9 @@
                     <div class="work-content">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h2 class="w-title">Lorem impsum dolor</h2>
+                                <h2 class="w-title" data-tr="portfolio.webTitle1">Lorem impsum dolor</h2>
                                 <div class="w-more">
-                                    <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2023</span>
+                                    <span class="w-ctegory">Web Design</span> / <span class="w-date" data-tr="portfolio.webDate1">18 Sep. 2023</span>
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -494,9 +491,9 @@
                     <div class="work-content">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h2 class="w-title">Loreda Cuno Nere</h2>
+                                <h2 class="w-title" data-tr="portfolio.webTitle2">Loreda Cuno Nere</h2>
                                 <div class="w-more">
-                                    <span class="w-ctegory">Web Design</span> / <span class="w-date">10 Jun. 2023</span>
+                                    <span class="w-ctegory">Web Design</span> / <span class="w-date" data-tr="portfolio.webDate2">10 Jun. 2023</span>
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -518,9 +515,9 @@
                     <div class="work-content">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h2 class="w-title">Mavrito Lana Dere</h2>
+                                <h2 class="w-title" data-tr="portfolio.webTitle3">Mavrito Lana Dere</h2>
                                 <div class="w-more">
-                                    <span class="w-ctegory">Web Design</span> / <span class="w-date">07 Jan. 2023</span>
+                                    <span class="w-ctegory">Web Design</span> / <span class="w-date" data-tr="portfolio.webDate3">07 Jan. 2023</span>
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -542,9 +539,9 @@
                     <div class="work-content">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h2 class="w-title">Bindo Laro Cado</h2>
+                                <h2 class="w-title" data-tr="portfolio.webTitle4">Bindo Laro Cado</h2>
                                 <div class="w-more">
-                                    <span class="w-ctegory">Web Design</span> / <span class="w-date">15 Sep. 2022</span>
+                                    <span class="w-ctegory">Web Design</span> / <span class="w-date" data-tr="portfolio.webDate4">15 Sep. 2022</span>
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -566,9 +563,9 @@
                     <div class="work-content">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h2 class="w-title">Studio Lena Mado</h2>
+                                <h2 class="w-title" data-tr="portfolio.webTitle5">Studio Lena Mado</h2>
                                 <div class="w-more">
-                                    <span class="w-ctegory">Web Design</span> / <span class="w-date">22 Jun. 2021</span>
+                                    <span class="w-ctegory">Web Design</span> / <span class="w-date" data-tr="portfolio.webDate5">22 Jun. 2021</span>
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -590,9 +587,9 @@
                     <div class="work-content">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h2 class="w-title">Studio Big Bang</h2>
+                                <h2 class="w-title" data-tr="portfolio.webTitle6">Studio Big Bang</h2>
                                 <div class="w-more">
-                                    <span class="w-ctegory">Web Design</span> / <span class="w-date">26 Jan. 2022</span>
+                                    <span class="w-ctegory">Web Design</span> / <span class="w-date" data-tr="portfolio.webDate6">26 Jan. 2022</span>
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -614,12 +611,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="title-box text-center">
-                    <h3 class="title-a">
-                        My GitHub Repo
-                    </h3>
-                    <p class="subtitle-a">
-                        The latest GitHub Repo
-                    </p>
+                    <h3 class="title-a" data-tr="github.title">My GitHub Repo</h3>
+                    <p class="subtitle-a" data-tr="github.subtitle">The latest GitHub Repo</p>
                     <div class="line-mf"></div>
                 </div>
             </div>
@@ -639,9 +632,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="title-box-2">
-                                    <h5 class="title-left">
-                                        Send Message Us
-                                    </h5>
+                                    <h5 class="title-left" data-tr="contact.title">Send Message Us</h5>
                                 </div>
                                 <div>
                                     <form action="forms/contact.php" method="post" role="form" class="php-email-form requires-validation" novalidate>
@@ -650,43 +641,42 @@
                                                 <div class="form-group">
                                                     <input type="text" name="name" class="form-control" id="name"
                                                         placeholder="Your Name" required>
-                                                        <div class="valid-feedback">Campul Nume este valid!</div>
-                                                        <div class="invalid-feedback">Campul Nume trebuie completat corect!</div>
+                                                        <div class="valid-feedback" data-tr="contact.fieldNameValid1">Information is valid!</div>
+                                                        <div class="invalid-feedback" data-tr="contact.fieldNameInvalid1">Information is invalid!</div>
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-group">
                                                     <input type="email" class="form-control" name="email" id="email"
                                                         placeholder="Your Email" required>
-                                                        <div class="valid-feedback">Campul Nume este valid!</div>
-                                                        <div class="invalid-feedback">Campul Nume trebuie completat corect!</div>
+                                                        <div class="valid-feedback" data-tr="contact.fieldNameValid2">Information is valid!</div>
+                                                        <div class="invalid-feedback" data-tr="contact.fieldNameInvalid2">Information is invalid!</div>
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" name="subject" id="subject"
                                                         placeholder="Subject" required>
-                                                        <div class="valid-feedback">Campul Nume este valid!</div>
-                                                        <div class="invalid-feedback">Campul Nume trebuie completat corect!</div>
+                                                        <div class="valid-feedback" data-tr="contact.fieldNameValid3">Information is valid!</div>
+                                                        <div class="invalid-feedback" data-tr="contact.fieldNameInvalid3">Information is invalid!</div>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <textarea class="form-control" name="message" rows="5"
                                                         placeholder="Message" required></textarea>
-                                                        <div class="valid-feedback">Campul Nume este valid!</div>
-                                                        <div class="invalid-feedback">Campul Nume trebuie completat corect!</div>
+                                                        <div class="valid-feedback" data-tr="contact.fieldNameValid4">Information is valid!</div>
+                                                        <div class="invalid-feedback" data-tr="contact.fieldNameInvalid4">Information is invalid!</div>
                                                 </div>
                                             </div>
                                             <div class="col-md-12 text-center my-3">
-                                                <div class="loading">Loading</div>
+                                                <div class="loading" data-tr="contact.loading">Loading</div>
                                                 <div class="error-message"></div>
-                                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                                                <div class="sent-message" data-tr="contact.messageSent">Your message has been sent. Thank you!</div>
                                             </div>
                                             <div class="col-md-12 text-center">
                                                 <button type="submit"
-                                                    class="button button-a button-big button-rouded">Send
-                                                    Message</button>
+                                                    class="button button-a button-big button-rouded" data-tr="contact.sendMessage">Send Message</button>
                                             </div>
                                         </div>
                                     </form>
@@ -694,9 +684,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="title-box-2 pt-4 pt-md-0">
-                                    <h5 class="title-left">
-                                        Get in Touch
-                                    </h5>
+                                    <h5 class="title-left" data-tr="contact.getInTouch">Get in Touch</h5>
                                 </div>
                                 <div class="more-info">
                                     <p class="lead">
@@ -763,11 +751,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="copyright-box">
-                    <p class="copyright">&copy; Copyright <strong>AboutMe</strong>. All Rights Reserved</p>
-                    <div class="credits">
-
-
-                        Designed by <a href="#">About Me</a>
+                    <p class="copyright" data-tr="footer.rights">&copy; Copyright <strong>Marius-Ionita Bogdan</strong>. All Rights Reserved</p>
+                    <div class="credits" data-tr="footer.design">Designed by <a href="#">Marius-Ionita Bogdan</a>
                     </div>
                 </div>
             </div>
@@ -779,6 +764,6 @@
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
 
-<script defer src="js/main.bundle.js?02c235db41e5ef60467c"></script></body>
+<script defer src="js/main.bundle.js?76627432f265f292b4b3"></script></body>
 
 </html>

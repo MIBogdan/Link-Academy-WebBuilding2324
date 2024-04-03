@@ -46,7 +46,7 @@ function showData(repos) {
                         <p class="s-description text-center">
                         ${item.description}
                         </p>
-                        <span> Date: ${item.updated_at}</span> <br>
+                        <span>Date: ${item.updated_at}</span> <br>
                         <span> Programming Language: ${item.language}</span> 
                     </div>
                 </div>

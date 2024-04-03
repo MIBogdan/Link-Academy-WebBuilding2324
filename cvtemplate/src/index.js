@@ -19,12 +19,11 @@ import '../node_modules/typed.js/dist/typed.umd.js'
 
 import './js/validare.js';
 
+import './js/translate.js';
 
 import './js/main.js';
 
 import './js/skill.js';
 
 import './js/githubapi.js';
-
-import './js/translate.js';
 
