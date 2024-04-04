@@ -41,8 +41,6 @@ window.changeLanguage = function (lang) {
 document.querySelector('[data-id= "ro"]').addEventListener("click", function() {
 
     let lang ='ro';
-    alert(lang);
-    console.log('limba aleasa', lang);
     setLanguagePreference(lang);
 
     const langData = fetchLanguageData(lang);
@@ -52,8 +50,6 @@ document.querySelector('[data-id= "ro"]').addEventListener("click", function() {
   document.querySelector('[data-id="en"]').addEventListener("click", function() {
 
     let lang ='en';
-    alert(lang);
-    console.log('limba aleasa', lang);
     setLanguagePreference(lang);
 
     const langData = fetchLanguageData(lang);
@@ -62,7 +58,7 @@ document.querySelector('[data-id= "ro"]').addEventListener("click", function() {
 
 // Call updateContent() on page load
 window.addEventListener('DOMContentLoaded', async () => {
-    const userPreferredLanguage = localStorage.getItem('language') || 'ro';
+    const userPreferredLanguage = localStorage.getItem('language') || 'en';
     console.log('limba aleasa2', userPreferredLanguage);
     document.documentElement.setAttribute('lang', userPreferredLanguage);
     document.querySelector('[data-id= "' + userPreferredLanguage + '"]').classList.add('active');
